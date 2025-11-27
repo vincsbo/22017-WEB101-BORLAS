@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vincent Carl S. Borlas - Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            width: 900px;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 20px;
+        }
+
+        .left-panel {
+            width: 35%;
+            background-color: #f8f8f8;
+            padding: 30px;
+            text-align: center;
+            border-right: 1px solid #eee;
+        }
+
+        .profile-pic-container {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px auto;
+            border: 3px solid #ddd;
+        }
+
+        .profile-pic {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .name {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #222;
+        }
+
+        .title {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .contact-section, .skills-section {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            text-align: left;
+            border-radius: 5px;
+        }
+
+        .contact-section h2, .skills-section h2 {
+            font-size: 1.3em;
+            margin: 0;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #555;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-section h2 i, .skills-section h2 i {
+            margin-right: 10px;
+            font-size: 1.5em;
+        }
+
+        .contact-info {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            font-size: 0.95em;
+            line-height: 1.4;
+        }
+
+        .contact-info li i {
+            margin-right: 10px;
+            font-size: 1.1em;
+            margin-top: 3px;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+            text-align: left;
+        }
+
+        .skills-list li {
+            background-color: #555;
+            padding: 8px 12px;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        .right-panel {
+            width: 65%;
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-header h2 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .section-header i {
+            margin-right: 10px;
+            font-size: 1.7em;
+        }
+
+        .about-me-content {
+            line-height: 1.6;
+            color: #444;
+            font-size: 0.95em;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 5px;
+            width: 2px;
+            height: 100%;
+            background: #ddd;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: -3px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #333;
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 2px #333;
+        }
+
+        .timeline-item h3 {
+            font-size: 1.1em;
+            margin: 0 0 5px 0;
+            color: #222;
+        }
+
+        .timeline-item p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .timeline-item .date {
+            font-weight: 700;
+            color: #555;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .timeline-item .details {
+            margin-top: 10px;
+            list-style: disc;
+            padding-left: 20px;
+            color: #444;
+            font-size: 0.9em;
+        }
+
+        .timeline-item .details li {
+            margin-bottom: 5px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="profile-pic-container">
+                <img src="https://i.ibb.co/CmV6g4z/image.png" alt="Vincent Carl S. Borlas" class="profile-pic">
+            </div>
+            <div class="name">VINCENT CARL S. BORLAS</div>
+            <div class="title">STUDENT</div>
+
+            <div class="contact-section">
+                <h2><i class="fas fa-envelope"></i> Contact</h2>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> 88 Rd. 8 GSIS Hills Subd.<br>Talipapa Caloocan City</li>
+                    <li><i class="fas fa-phone-alt"></i> +63 994 630 1703</li>
+                    <li><i class="fas fa-at"></i> borlas.vincentcarl.santos@gmail.com</li>
+                </ul>
+            </div>
+
+            <div class="skills-section">
+                <h2><i class="fas fa-tools"></i> Skills</h2>
+                <ul class="skills-list">
+                    <li>Customer Support</li>
+                    <li>Internet Research</li>
+                    <li>Data Entry & Database Management</li>
+                    <li>Time Management</li>
+                    <li>Communication Skills</li>
+                    <li>Multitasking</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-user"></i> About Me</h2>
+                </div>
+                <div class="about-me-content">
+                    I am an IT student with experience in retail and technical support. Skilled in problem-solving, troubleshooting, and adapting to different situations. I aim to apply my technical knowledge while continuing to grow professionally and remain dedicated to balancing both school and work responsibilities.
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="date">2023-2024</span>
+                        <h3>BS in Information Technology</h3>
+                        <p><em>Bestlink College of The Philippines</em></p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="date">2021-2023</span>
+                        <h3>Senior High School - Science Technology and Engineering and Mathematics</h3>
+                        <p><em>College of St. Catherine Quezon City</em></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="date">2023-2024</span>
+                        <h3>Retail and Technical Support Representative</h3>
+                        <p><em>Concentrix Company</em></p>
+                        <ul class="details">
+                            <li>Provided retail and technical support, assisting customers with troubleshooting and resolving issues efficiently.</li>
+                            <li>Skilled in customer communication, remote support tools, and ensuring a high standard of service delivery.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
