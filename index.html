@@ -6,12 +6,23 @@
     <title>Vincent Carl S. Borlas - Profile</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
+        /* --- COLOR VARIABLES --- */
+        :root {
+            --primary-bg: #f7f9fc;    /* Very light gray/off-white for background */
+            --container-bg: #ffffff;  /* White for the main box */
+            --left-panel-bg: #eef2f7; /* Soft light gray/blue for the side bar */
+            --primary-text: #2c3e50;  /* Deep Charcoal/Navy for headings and main text */
+            --secondary-text: #6c7a89;/* Muted Gray/Blue for subtle text */
+            --accent-color: #3498db;  /* Sky Blue for highlights and icons */
+            --accent-dark: #2980b9;   /* Darker Blue for hover/active */
+        }
+
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f7f6;
-            color: #333;
+            background-color: var(--primary-bg); /* Changed */
+            color: var(--primary-text); /* Changed */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -21,19 +32,19 @@
         .container {
             display: flex;
             width: 900px;
-            background-color: #fff;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            background-color: var(--container-bg);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow */
+            border-radius: 12px; /* Slightly more rounded */
             overflow: hidden;
             margin: 20px;
         }
 
         .left-panel {
             width: 35%;
-            background-color: #f8f8f8;
+            background-color: var(--left-panel-bg); /* Changed */
             padding: 30px;
             text-align: center;
-            border-right: 1px solid #eee;
+            border-right: none; /* Removed harsh border */
         }
 
         .profile-pic-container {
@@ -42,7 +53,8 @@
             border-radius: 50%;
             overflow: hidden;
             margin: 0 auto 20px auto;
-            border: 3px solid #ddd;
+            border: 4px solid var(--accent-color); /* Used accent color */
+            box-shadow: 0 0 0 4px var(--left-panel-bg); /* White outline for lift */
         }
 
         .profile-pic {
@@ -55,22 +67,23 @@
             font-size: 2em;
             font-weight: 700;
             margin-bottom: 5px;
-            color: #222;
+            color: var(--primary-text);
         }
 
         .title {
             font-size: 1.1em;
-            color: #555;
+            color: var(--secondary-text);
             margin-bottom: 30px;
         }
 
         .contact-section, .skills-section {
-            background-color: #333;
-            color: #fff;
-            padding: 15px 20px;
+            background-color: var(--primary-text); /* Dark background for sections */
+            color: var(--container-bg); /* White text on dark background */
+            padding: 18px 20px; /* Slightly more padding */
             margin-bottom: 20px;
             text-align: left;
-            border-radius: 5px;
+            border-radius: 8px; /* Softer edges */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         .contact-section h2, .skills-section h2 {
@@ -85,6 +98,7 @@
         .contact-section h2 i, .skills-section h2 i {
             margin-right: 10px;
             font-size: 1.5em;
+            color: var(--accent-color); /* Accent color for icons in dark header */
         }
 
         .contact-info {
@@ -105,6 +119,7 @@
             margin-right: 10px;
             font-size: 1.1em;
             margin-top: 3px;
+            color: var(--accent-color); /* Accent color for icons */
         }
 
         .skills-list {
@@ -115,7 +130,7 @@
         }
 
         .skills-list li {
-            background-color: #555;
+            background-color: #465a6c; /* Slightly lighter than the dark background */
             padding: 8px 12px;
             margin-bottom: 8px;
             border-radius: 4px;
@@ -132,13 +147,14 @@
         }
 
         .section-header {
-            background-color: #333;
-            color: #fff;
+            background-color: var(--accent-dark); /* Accent color background for right headers */
+            color: var(--container-bg);
             padding: 15px 20px;
             margin-bottom: 20px;
-            border-radius: 5px;
+            border-radius: 8px;
             display: flex;
             align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
         }
 
         .section-header h2 {
@@ -149,11 +165,12 @@
         .section-header i {
             margin-right: 10px;
             font-size: 1.7em;
+            color: #ffffff;
         }
 
         .about-me-content {
             line-height: 1.6;
-            color: #444;
+            color: var(--secondary-text);
             font-size: 0.95em;
         }
 
@@ -169,7 +186,7 @@
             left: 5px;
             width: 2px;
             height: 100%;
-            background: #ddd;
+            background: var(--left-panel-bg); /* Lighter line */
         }
 
         .timeline-item {
@@ -186,26 +203,26 @@
             width: 10px;
             height: 10px;
             border-radius: 50%;
-            background: #333;
-            border: 2px solid #fff;
-            box-shadow: 0 0 0 2px #333;
+            background: var(--accent-color); /* Accent color dot */
+            border: 2px solid var(--container-bg);
+            box-shadow: 0 0 0 2px var(--accent-color);
         }
 
         .timeline-item h3 {
             font-size: 1.1em;
             margin: 0 0 5px 0;
-            color: #222;
+            color: var(--primary-text);
         }
 
         .timeline-item p {
             margin: 0;
             font-size: 0.9em;
-            color: #666;
+            color: var(--secondary-text);
         }
 
         .timeline-item .date {
             font-weight: 700;
-            color: #555;
+            color: var(--accent-color); /* Accent color for dates */
             margin-bottom: 5px;
             display: block;
         }
@@ -214,7 +231,7 @@
             margin-top: 10px;
             list-style: disc;
             padding-left: 20px;
-            color: #444;
+            color: var(--secondary-text);
             font-size: 0.9em;
         }
 
