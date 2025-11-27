@@ -3,58 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vincent Carl S. Borlas - Profile</title>
+    <title>Vincent Carl S. Borlas - Professional Profile</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* --- COLOR VARIABLES --- */
         :root {
-            --primary-bg: #f7f9fc;    /* Very light gray/off-white for background */
-            --container-bg: #ffffff;  /* White for the main box */
-            --left-panel-bg: #eef2f7; /* Soft light gray/blue for the side bar */
-            --primary-text: #2c3e50;  /* Deep Charcoal/Navy for headings and main text */
-            --secondary-text: #6c7a89;/* Muted Gray/Blue for subtle text */
-            --accent-color: #3498db;  /* Sky Blue for highlights and icons */
-            --accent-dark: #2980b9;   /* Darker Blue for hover/active */
+            --primary-bg: #f7f9fc;    
+            --container-bg: #ffffff;  
+            --left-panel-bg: #eef2f7; 
+            --primary-text: #2c3e50;  
+            --secondary-text: #6c7a89;
+            --accent-color: #3498db;  
+            --accent-dark: #2980b9;   
         }
 
+        /* --- GLOBAL STYLES --- */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--primary-bg); /* Changed */
-            color: var(--primary-text); /* Changed */
+            background-color: var(--primary-bg);
+            color: var(--primary-text);
+            line-height: 1.6;
+        }
+
+        /* --- HEADER / NAVIGATION BAR --- */
+        .site-header {
+            background-color: var(--primary-text);
+            color: white;
+            padding: 15px 5%; /* Use percentage for full-width padding */
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            min-height: 100vh;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        .container {
-            display: flex;
-            width: 900px;
-            background-color: var(--container-bg);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Slightly deeper shadow */
-            border-radius: 12px; /* Slightly more rounded */
-            overflow: hidden;
-            margin: 20px;
+        .logo {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 400;
+            transition: color 0.3s;
         }
 
-        .left-panel {
-            width: 35%;
-            background-color: var(--left-panel-bg); /* Changed */
-            padding: 30px;
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* --- HERO SECTION (The Big Introduction) --- */
+        .hero-section {
+            background-color: var(--left-panel-bg);
+            padding: 80px 5%;
             text-align: center;
-            border-right: none; /* Removed harsh border */
+            border-bottom: 3px solid var(--accent-color);
         }
 
         .profile-pic-container {
-            width: 150px;
-            height: 150px;
+            width: 180px; /* Slightly larger image */
+            height: 180px;
             border-radius: 50%;
             overflow: hidden;
             margin: 0 auto 20px auto;
-            border: 4px solid var(--accent-color); /* Used accent color */
-            box-shadow: 0 0 0 4px var(--left-panel-bg); /* White outline for lift */
+            border: 5px solid var(--accent-color);
+            box-shadow: 0 0 0 5px var(--left-panel-bg);
         }
 
         .profile-pic {
@@ -64,62 +82,78 @@
         }
 
         .name {
-            font-size: 2em;
+            font-size: 3em;
             font-weight: 700;
             margin-bottom: 5px;
             color: var(--primary-text);
         }
 
         .title {
-            font-size: 1.1em;
-            color: var(--secondary-text);
+            font-size: 1.5em;
+            color: var(--accent-dark);
             margin-bottom: 30px;
         }
 
-        .contact-section, .skills-section {
-            background-color: var(--primary-text); /* Dark background for sections */
-            color: var(--container-bg); /* White text on dark background */
-            padding: 18px 20px; /* Slightly more padding */
-            margin-bottom: 20px;
-            text-align: left;
-            border-radius: 8px; /* Softer edges */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        /* --- MAIN CONTENT LAYOUT --- */
+        .main-content {
+            display: flex;
+            max-width: 1200px; /* Max width for a clean look on large screens */
+            margin: 40px auto;
+            padding: 0 20px;
         }
 
-        .contact-section h2, .skills-section h2 {
-            font-size: 1.3em;
-            margin: 0;
+        .side-bar {
+            width: 300px; /* Fixed width for the sidebar */
+            margin-right: 40px;
+        }
+
+        .content-area {
+            flex-grow: 1; /* Takes up the remaining space */
+        }
+        
+        /* --- SIDE BAR SECTIONS --- */
+        .contact-section, .skills-section {
+            background-color: var(--container-bg); 
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: left;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .side-bar h2 {
+            font-size: 1.4em;
+            color: var(--accent-dark);
             padding-bottom: 10px;
-            border-bottom: 1px solid #555;
+            border-bottom: 2px solid var(--accent-color);
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
         }
-
-        .contact-section h2 i, .skills-section h2 i {
+        
+        .side-bar h2 i {
             margin-right: 10px;
-            font-size: 1.5em;
-            color: var(--accent-color); /* Accent color for icons in dark header */
+            color: var(--accent-color);
         }
 
         .contact-info {
             list-style: none;
             padding: 0;
-            margin-top: 15px;
         }
 
         .contact-info li {
             display: flex;
             align-items: flex-start;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             font-size: 0.95em;
-            line-height: 1.4;
         }
 
         .contact-info li i {
             margin-right: 10px;
             font-size: 1.1em;
             margin-top: 3px;
-            color: var(--accent-color); /* Accent color for icons */
+            color: var(--accent-color);
         }
 
         .skills-list {
@@ -130,50 +164,52 @@
         }
 
         .skills-list li {
-            background-color: #465a6c; /* Slightly lighter than the dark background */
-            padding: 8px 12px;
-            margin-bottom: 8px;
+            background-color: var(--left-panel-bg);
+            color: var(--primary-text);
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            border-left: 3px solid var(--accent-color);
             border-radius: 4px;
-            font-size: 0.9em;
+            font-size: 0.95em;
+            font-weight: 500;
         }
 
-        .right-panel {
-            width: 65%;
-            padding: 30px;
-        }
-
+        /* --- CONTENT AREA SECTIONS --- */
         .section {
-            margin-bottom: 30px;
+            background-color: var(--container-bg);
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         }
 
         .section-header {
-            background-color: var(--accent-dark); /* Accent color background for right headers */
-            color: var(--container-bg);
-            padding: 15px 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
+            border-bottom: 3px solid var(--accent-dark);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
             display: flex;
             align-items: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
         }
 
         .section-header h2 {
-            font-size: 1.5em;
+            font-size: 2em;
             margin: 0;
+            color: var(--primary-text);
         }
 
         .section-header i {
-            margin-right: 10px;
-            font-size: 1.7em;
-            color: #ffffff;
+            margin-right: 15px;
+            font-size: 1.8em;
+            color: var(--accent-color);
         }
 
         .about-me-content {
-            line-height: 1.6;
             color: var(--secondary-text);
-            font-size: 0.95em;
+            font-size: 1em;
+            margin-top: 0;
         }
 
+        /* --- TIMELINE STYLES (Kept similar but enhanced colors) --- */
         .timeline {
             position: relative;
             padding-left: 30px;
@@ -186,12 +222,12 @@
             left: 5px;
             width: 2px;
             height: 100%;
-            background: var(--left-panel-bg); /* Lighter line */
+            background: var(--left-panel-bg);
         }
 
         .timeline-item {
             position: relative;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             padding-left: 20px;
         }
 
@@ -200,67 +236,100 @@
             position: absolute;
             top: 5px;
             left: -3px;
-            width: 10px;
-            height: 10px;
+            width: 12px;
+            height: 12px;
             border-radius: 50%;
-            background: var(--accent-color); /* Accent color dot */
-            border: 2px solid var(--container-bg);
+            background: var(--accent-color);
+            border: 3px solid var(--container-bg);
             box-shadow: 0 0 0 2px var(--accent-color);
         }
 
         .timeline-item h3 {
-            font-size: 1.1em;
+            font-size: 1.3em;
             margin: 0 0 5px 0;
             color: var(--primary-text);
         }
 
         .timeline-item p {
             margin: 0;
-            font-size: 0.9em;
+            font-size: 1em;
             color: var(--secondary-text);
         }
 
         .timeline-item .date {
             font-weight: 700;
-            color: var(--accent-color); /* Accent color for dates */
+            color: var(--accent-dark);
             margin-bottom: 5px;
             display: block;
+            font-size: 0.9em;
+        }
+        
+        .timeline-item em {
+            font-weight: 500;
+            color: var(--accent-color);
         }
 
-        .timeline-item .details {
-            margin-top: 10px;
-            list-style: disc;
-            padding-left: 20px;
-            color: var(--secondary-text);
+        /* --- FOOTER --- */
+        .site-footer {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: var(--primary-text);
+            color: var(--left-panel-bg);
             font-size: 0.9em;
         }
 
-        .timeline-item .details li {
-            margin-bottom: 5px;
+        /* --- RESPONSIVENESS (for smaller screens) --- */
+        @media (max-width: 992px) {
+            .main-content {
+                flex-direction: column;
+                padding: 0 5%;
+            }
+            .side-bar {
+                width: 100%;
+                margin-right: 0;
+                order: 2; /* Move sidebar below main content on mobile */
+            }
+            .content-area {
+                order: 1; /* Keep main content at the top */
+            }
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <div class="left-panel">
-            <div class="profile-pic-container">
-                <img src="vincent.jpg" alt="Vincent Carl S. Borlas" class="profile-pic">
-            </div>
-            <div class="name">VINCENT CARL S. BORLAS</div>
-            <div class="title">STUDENT</div>
+    
+    <header class="site-header">
+        <div class="logo">VCSB Profile</div>
+        <nav class="nav-links">
+            <a href="#about"><i class="fas fa-user"></i> About</a>
+            <a href="#skills"><i class="fas fa-tools"></i> Skills</a>
+            <a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
+            <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+    </header>
 
-            <div class="contact-section">
-                <h2><i class="fas fa-envelope"></i> Contact</h2>
+    <section class="hero-section">
+        <div class="profile-pic-container">
+            <img src="vincent.jpg" alt="Vincent Carl S. Borlas" class="profile-pic">
+        </div>
+        <div class="name">VINCENT CARL S. BORLAS</div>
+        <div class="title">IT Student | Technical Support Specialist</div>
+    </section>
+
+    <main class="main-content">
+        
+        <aside class="side-bar">
+            
+            <section class="contact-section" id="contact">
+                <h2><i class="fas fa-address-card"></i> Contact Details</h2>
                 <ul class="contact-info">
                     <li><i class="fas fa-map-marker-alt"></i> 88 Rd. 8 GSIS Hills Subd.<br>Talipapa Caloocan City</li>
                     <li><i class="fas fa-phone-alt"></i> +63 994 630 1703</li>
                     <li><i class="fas fa-at"></i> borlas.vincentcarl.santos@gmail.com</li>
                 </ul>
-            </div>
+            </section>
 
-            <div class="skills-section">
-                <h2><i class="fas fa-tools"></i> Skills</h2>
+            <section class="skills-section" id="skills">
+                <h2><i class="fas fa-toolbox"></i> Core Skills</h2>
                 <ul class="skills-list">
                     <li>Customer Support</li>
                     <li>Internet Research</li>
@@ -269,20 +338,21 @@
                     <li>Communication Skills</li>
                     <li>Multitasking</li>
                 </ul>
-            </div>
-        </div>
+            </section>
+        </aside>
 
-        <div class="right-panel">
-            <div class="section">
+        <div class="content-area">
+            
+            <section class="section" id="about">
                 <div class="section-header">
                     <h2><i class="fas fa-user"></i> About Me</h2>
                 </div>
-                <div class="about-me-content">
-                    I am an IT student with experience in retail and technical support. Skilled in problem-solving, troubleshooting, and adapting to different situations. I aim to apply my technical knowledge while continuing to grow professionally and remain dedicated to balancing both school and work responsibilities.
-                </div>
-            </div>
+                <p class="about-me-content">
+                    I am an **IT student** with experience in retail and technical support. Skilled in problem-solving, troubleshooting, and adapting to different situations. I aim to apply my technical knowledge while continuing to grow professionally and remain dedicated to balancing both school and work responsibilities. My background gives me a unique blend of technical aptitude and strong customer-facing communication skills.
+                </p>
+            </section>
 
-            <div class="section">
+            <section class="section" id="education">
                 <div class="section-header">
                     <h2><i class="fas fa-graduation-cap"></i> Education</h2>
                 </div>
@@ -298,9 +368,9 @@
                         <p><em>College of St. Catherine Quezon City</em></p>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="section">
+            <section class="section" id="experience">
                 <div class="section-header">
                     <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
                 </div>
@@ -315,8 +385,12 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
-    </div>
+    </main>
+    
+    <footer class="site-footer">
+        &copy; 2025 Vincent Carl S. Borlas. Powered by HTML and CSS.
+    </footer>
 </body>
 </html>
